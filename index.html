@@ -9,7 +9,8 @@
     <link href="https://fonts.googleapis.com/css?family=Gugi" rel="stylesheet">
     <link href='https://fonts.googleapis.com/css?family=Orbitron' rel='stylesheet' type='text/css'>
 
-    <link rel="manifest" href="/manifest.json">
+    <link rel="manifest" href="manifest.json">
+    <meta name="theme-color" content="#000"/>
 
     <link rel="stylesheet" href="style.css">
     <script src="main.js"></script>
@@ -33,5 +34,19 @@
             <button id="start-button" class="pure-button pure-button-primary">START!</button>
         </center>
     </form>
+
+    <!--SERVICE WORKER REGISTRATION-->
+    <script>
+        if ('serviceWorker' in navigator) {
+            navigator.serviceWorker.register('/sw.js')
+            .then(function(response) {
+                // Service worker registration done
+                console.log('Registration Successful', response);
+            }, function(error) {
+                // Service worker registration failed
+                console.log('Registration Failed', error);
+            })
+        }
+    </script>
 </body>
 </html>
