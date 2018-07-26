@@ -1,0 +1,14 @@
+body {
+    background-color: black;
+}
+
+#title {
+    text-align: center;
+    font-family: 'Gugi', cursive;
+    font-size: 4em;
+    color: white;
+}
+
+#start-button {
+    margin-top: 0.5em;
+}
